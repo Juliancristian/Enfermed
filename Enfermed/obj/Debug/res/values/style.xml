@@ -1,0 +1,5 @@
+<resources><style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar"><item name="colorPrimary">#03a9f4</item><item name="colorPrimaryDark">#03a9f4</item><item name="colorAccent">#03a9f4</item><!--
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    --></style><style name="ToolbarBottom.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title"><item name="android:textSize">16dp</item></style><style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title"><item name="android:textSize">22dp</item></style></resources>

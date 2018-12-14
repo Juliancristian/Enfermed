@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+              android:id="@+id/txtView_Farmaco"
+              android:text="Ingresar Farmaco"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtFarmaco"
+                android:hint="Ingresar Farmaco"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+            <TextView
+                android:id="@+id/txtView_Dosis"
+                android:text="Ingresar Dosis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtDosis"
+                android:hint="Ingresar Dosis"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+            <TextView
+                android:text="Vía de Administración"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp" />
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@+id/view_below" >
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:text="Oral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:text="Subcutánea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:text="Intramuscular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio4"
+                    android:text="Intravenoso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio5"
+                    android:text="Inhalatoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+            </RadioGroup>        
+            <TextView
+                android:id="@+id/txtView_Fecha"
+                android:text="Ingresar Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtFecha"
+                android:hint="Ingresar Fecha"
+                android:layout_width="match_parent"                
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:focusable="false"/>
+            <TextView
+                android:id="@+id/txtView_Horario"
+                android:text="Ingresar Horario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtHora"
+                android:hint="Horario"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:focusable="false"/>
+            <Button
+                android:id="@+id/btnEdit"
+                android:text="Actualizar"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="#03a9f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:padding="18dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

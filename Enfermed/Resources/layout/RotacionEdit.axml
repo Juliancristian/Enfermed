@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtTipoColchon"
+                android:text="Tipo de Colchon"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp" />
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtTipoColchon">
+              <RadioButton
+                  android:id="@+id/radioComun"
+                  android:text="Común"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_marginLeft="15dp"
+                  android:checked="true"/>
+              <RadioButton
+                  android:id="@+id/radioAire"
+                  android:text="Aire"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"/>
+            </RadioGroup>
+            <TextView
+                android:id="@+id/txtPosCubito"
+                android:text="Posición Decúbito"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp" />
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtPosCubito" >
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:text="Lateral Izquierdo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:text="Lateral Derecho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio3"
+                    android:text="Supina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/radio4"
+                    android:text="Prono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"/>
+            </RadioGroup>
+            <TextView
+                android:id="@+id/txtView_Fecha"
+                android:text="Ingresar Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtFecha"
+                android:hint="Ingresar Fecha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:focusable="false"/>
+            <TextView
+                android:id="@+id/txtView_Horario"
+                android:text="Ingresar Horario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"/>
+            <EditText
+                android:id="@+id/edtHora"
+                android:hint="Horario"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:focusable="false"/>
+            <Button
+                android:id="@+id/btnEdit"
+                android:text="Actualizar"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="#03a9f4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:padding="18dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
