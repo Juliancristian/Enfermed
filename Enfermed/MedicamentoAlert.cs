@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Android.OS;
 using Android.App;
@@ -43,14 +44,21 @@ namespace Enfermed
             _medicamentoService = new MedicamentoService(); // Instanciamos
             _listMedicamentos = _medicamentoService.getListMedicamentosNow(); // Devuelve lista
 
-            // Si hay registros mostrar lista
-            if (_listMedicamentos.Count > 0)
+            // Si hay registros de medicamentos.
+            if (_listMedicamentos.Any())
+               // if (_listMedicamentos.Count > 0)
             {
                 adapter = new RecordMedicamentoAdapter(this, _listMedicamentos);
                 _listView.Adapter = adapter;
 
                 // Lista items click
                 _listView.ItemClick += List_ItemClick;
+            }
+            else
+            {
+                this.FinishAffinity();
+                Finish();
+                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
             }
         }
 
@@ -89,9 +97,29 @@ namespace Enfermed
             // Si selecciona icon exit
             if (item.ItemId == Resource.Id.exit)
             {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                AlertDialog alert = dialog.Create();
+                alert.SetTitle("Salir");
+                alert.SetMessage("¿Estás seguro?");
+                alert.SetIcon(Resource.Drawable.logo);
+                alert.SetButton("Si", (c, ev) =>
+                {
+                    this.FinishAffinity();
+                    Finish();
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+
+                    GC.Collect();
+                });
+
+                alert.SetButton2("no", (c, ev) => { });
+                alert.Show();
+
+
+                /*
                 this.FinishAffinity();
                 Finish();
                 Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                */
             }
 
             return base.OnOptionsItemSelected(item);

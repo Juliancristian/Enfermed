@@ -131,4 +131,3 @@ C:\Users\Julian\Documents\Visual Studio 2015\Projects\Enfermed\Enfermed\obj\Debu
 C:\Users\Julian\Documents\Visual Studio 2015\Projects\Enfermed\Enfermed\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Julian\Documents\Visual Studio 2015\Projects\Enfermed\Enfermed\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\Julian\Documents\Visual Studio 2015\Projects\Enfermed\Enfermed\obj\Debug\Enfermed.dll.mdb
-C:\Users\Julian\Documents\Visual Studio 2015\Projects\Enfermed\Enfermed\bin\Debug\Enfermed.dll.mdb

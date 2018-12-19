@@ -8,20 +8,18 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:minWidth="25px"
-        android:minHeight="25px">
+        android:fillViewport="true">
         <LinearLayout
-            android:orientation="vertical"
+            android:paddingTop="65dp"
             android:paddingBottom="20dp"
+            android:orientation="vertical"       
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
@@ -29,7 +27,6 @@
                 android:text="Tipo de Colchon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
                 android:layout_marginLeft="15dp"/>
             <TextView
                 android:id="@+id/txtTipoColchon"

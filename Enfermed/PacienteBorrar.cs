@@ -1,16 +1,15 @@
+using System.Collections.Generic;
+using System.Linq;
 using Android.OS;
 using Android.App;
 using Android.Widget;
 using Android.Content;
 using Enfermed.Models;
 using Enfermed.Services;
-using Java.Lang;
 
 // importamos libreria AppCompatActivity
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Enfermed
 {
@@ -20,10 +19,12 @@ namespace Enfermed
         internal static string KEY_ID = "KEY_ID"; // Id Paciente
         private TextView _txtNroHistoria, _txtNombre, _txtApellido, _txtEdad, _txtGenero, _txtNroHabitacion, _txtNroCama;
         private List<Medicamento> _listaMedicamentos;
+        private List<Rotacion> _listaRotaciones;
         private Button _btnRemove;
         private Paciente _paciente;
         private PacienteService _pacienteService;
         private MedicamentoService _medicamentoService;
+        private RotacionService _rotacionService;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -82,9 +83,18 @@ namespace Enfermed
 
         private void RemovePaciente(int id)
         {
-            _listaMedicamentos = _medicamentoService.getMedicamentosPacienteById(id); // Devuelve lista medicamentos por Id paciente
+            // Instanciamos 
+            _listaMedicamentos = new List<Medicamento>();
+            _listaRotaciones = new List<Rotacion>();
+            _medicamentoService = new MedicamentoService();
+            _rotacionService = new RotacionService();
 
-            if (!_listaMedicamentos.Any())
+            // Consultamos
+            _listaMedicamentos = _medicamentoService.getMedicamentosPacienteById(id); // Devuelve lista medicamentos por Id paciente
+            _listaRotaciones = _rotacionService.getRotacionesPacienteById(id); // Devuelve lista rotaciones por Id paciente
+
+            // Si no hay registros de medicamentos y rotaciones. Se elimina el paciente
+            if (!_listaMedicamentos.Any() && !_listaRotaciones.Any())
             {
                 // Eliminar el registro en la base de datos
                 _pacienteService.deletePaciente(id);

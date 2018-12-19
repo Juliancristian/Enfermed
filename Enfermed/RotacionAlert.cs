@@ -27,7 +27,7 @@ namespace Enfermed
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.MedicamentoAlert);
+            SetContentView(Resource.Layout.RotacionAlert);
 
             Toolbar toolBar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolBar);

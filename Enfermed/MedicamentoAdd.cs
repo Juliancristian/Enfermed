@@ -114,9 +114,9 @@ namespace Enfermed
                     Toast.MakeText(this, "Se agregó: " + _medicamento.farmaco, ToastLength.Short).Show();
 
                     // Acción redireccionar a otra activity
-                    Intent otroActivity = new Intent(this, typeof(MedicamentoList));
-                    otroActivity.PutExtra("KEY_ID", _paciente.Id); // Pasamos el Id Paciente
-                    StartActivity(otroActivity);
+                    Intent myIntent = new Intent(this, typeof(MedicamentoList));
+                    myIntent.PutExtra("KEY_ID", _paciente.Id); // Pasamos el Id Paciente
+                    StartActivity(myIntent);
                 }
                 else
                 {

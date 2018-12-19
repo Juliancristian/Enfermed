@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="logo_margin">32dp</dimen>
+  <dimen name="card_margin_width">16dp</dimen>
+  <dimen name="card_margin_height">25dp</dimen>
+</resources>

@@ -30,9 +30,10 @@ namespace Enfermed
             // Recibimos el Id paciente
             var idPaciente = Intent.Extras.GetInt(KEY_ID);
 
+
             // Pasamos la variable al fragmento
-            Intent i = new Intent(this, typeof(MedicamentoFragment));
-            i.PutExtra(MedicamentoFragment.KEY_ID, idPaciente);
+            Intent myIntent = new Intent(this, typeof(MedicamentoFragment));
+            myIntent.PutExtra(MedicamentoFragment.KEY_ID, idPaciente);
 
             // Si Bundle esta vacio, mostrar contenedor de la lista
             if (savedInstanceState == null)
@@ -52,9 +53,9 @@ namespace Enfermed
             _btnAdd.Click += (sender, args) =>
             {
                 // Acción redireccionar a otra activity
-                Intent otroActivity = new Intent(this, typeof(MedicamentoAdd));
-                otroActivity.PutExtra(MedicamentoAdd.KEY_ID, idPaciente); // Pasamos el Id Paciente
-                StartActivity(otroActivity);
+                Intent i = new Intent(this, typeof(MedicamentoAdd));
+                i.PutExtra(MedicamentoAdd.KEY_ID, idPaciente); // Pasamos el Id Paciente
+                StartActivity(i);
             };
         }
     }

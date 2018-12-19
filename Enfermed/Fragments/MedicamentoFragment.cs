@@ -15,6 +15,7 @@ namespace Enfermed.Fragments
     {
         internal static string KEY_ID = "KEY_ID"; // Id Paciente      
         private ListView _medicamentoListView;
+        private Paciente _paciente;
         private List<Medicamento> _medicamentoList;
         private MedicamentoService _medicamentoService;
 
@@ -39,6 +40,7 @@ namespace Enfermed.Fragments
                 // Consultamos la lista medicamentos en el paciente
                 _medicamentoService = new MedicamentoService();
                 _medicamentoList = _medicamentoService.getMedicamentosPacienteById(idPaciente);
+
             }
             ConfigurarVistas();
             ConfigurarEventos();

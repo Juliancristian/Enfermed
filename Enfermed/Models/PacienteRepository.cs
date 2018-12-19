@@ -21,8 +21,8 @@ namespace Enfermed.Models
             {
                 _db.CreateTable<Paciente>();
                 _db.CreateTable<Medicamento>();
-                _db.CreateTable<PacienteMedicamento>();
                 _db.CreateTable<Rotacion>();
+                _db.CreateTable<PacienteMedicamento>();               
                 _db.CreateTable<PacienteRotacion>();
             }
         }
@@ -49,8 +49,20 @@ namespace Enfermed.Models
         public void deletePaciente(int Id)
         {
             using (var _db = new SQLiteConnection(_dbPath))
-            {                                         
-                _db.Delete<Paciente>(Id);                
+            {
+                Paciente paciente = new Paciente(); // Instanciamos
+                paciente = _db.Get<Paciente>(Id); // Devuelve un paciente por Id
+
+                List<Medicamento> listaMedicamentos = _db.GetWithChildren<Paciente>(Id).Medicamentos; // Medicamentos Actuales
+                List<Rotacion> listaRotaciones = _db.GetWithChildren<Paciente>(Id).Rotaciones; // Medicamentos Actuales
+
+                paciente.Medicamentos = new List<Medicamento>();
+                paciente.Rotaciones = new List<Rotacion>();
+                
+                foreach (var medicamento in paciente.Medicamentos) { paciente.Medicamentos.Remove(medicamento); } // Remove Medicamentos
+                foreach (var rotacion in paciente.Rotaciones) { paciente.Rotaciones.Remove(rotacion); } //Remove Rotaciones
+
+                _db.Delete<Paciente>(Id);                                           
             }
         }
 
@@ -86,6 +98,7 @@ namespace Enfermed.Models
 
                 paciente.Medicamentos = new List<Medicamento>();
                 paciente.Rotaciones = new List<Rotacion>();
+
                 paciente.Medicamentos.AddRange(listaMedicamentos); // Agrego Lista de Medicamentos Actuales
                 paciente.Rotaciones.AddRange(listaRotaciones); // Agrego Lista de Rotaciones Actuales
                 paciente.Medicamentos.Add(medicamento); // Agrego Nuevo Medicamento
@@ -188,6 +201,7 @@ namespace Enfermed.Models
 
                 paciente.Medicamentos = new List<Medicamento>();
                 paciente.Rotaciones = new List<Rotacion>();
+
                 paciente.Medicamentos.AddRange(listaMedicamentos); // Agrego Lista de Medicamentos Actuales
                 paciente.Rotaciones.AddRange(listaRotaciones); // Agrego Lista de Rotaciones Actuales
                 paciente.Rotaciones.Add(rotacion); // Agrego Nueva Rotacion

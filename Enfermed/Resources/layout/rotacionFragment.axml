@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="58dip"
+    android:layout_marginTop="57dip"
     android:paddingLeft="10dip"
     android:layout_marginRight="5dip">
     <ListView

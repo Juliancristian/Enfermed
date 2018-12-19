@@ -51,14 +51,19 @@ namespace Enfermed
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.popupMenuQR, menu);
+            MenuInflater.Inflate(Resource.Menu.popupMenuCode, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            // Si selecciona icon codeqr
-            if (item.ItemId == Resource.Id.codeqr)
+            // Si selecciona icon codebarras
+            if (item.ItemId == Resource.Id.codebarras)
+            {
+                // Acción redireccionar a otra activity
+                StartActivity(new Intent(this, typeof(ScanCodeBarras)));
+            }
+            else
             {
                 // Acción redireccionar a otra activity
                 StartActivity(new Intent(this, typeof(ScanCodeQR)));

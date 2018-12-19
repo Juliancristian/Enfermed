@@ -2,4 +2,5 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">Enfermed</string>
+    <string name="title_toolbar">EnferMed</string>
 </resources>

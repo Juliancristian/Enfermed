@@ -1,141 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.CoordinatorLayout   
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        </android.support.v7.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+          <LinearLayout
+              android:paddingTop="65dp"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
             <android.support.v7.widget.CardView
                 android:id="@+id/btnRecordatorio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/card_margin_height"
+                android:layout_marginLeft="@dimen/card_margin_width"
+                android:layout_marginRight="@dimen/card_margin_width">
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="72dp">
+                <ImageView
+                    android:id="@+id/img_alarm"
+                    android:src="@drawable/ic_alarm"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="16dp"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:id="@+id/txtRecAct"
+                    android:text="Recordatorio"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_toRightOf="@+id/img_alarm"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="72dp">
-                    <ImageView
-                        android:id="@+id/img_alarm"
-                        android:src="@drawable/ic_alarm"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="16dp"
-                        android:layout_alignParentLeft="true"/>
-                    <TextView
-                        android:id="@+id/txtRecAct"
-                        android:text="Recordatorio"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:layout_toRightOf="@+id/img_alarm"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="14dp"/>
-                    <TextView
-                        android:layout_below="@+id/txtRecAct"
-                        android:layout_toRightOf="@+id/img_alarm"
-                        android:text="Administracion de Alarmas"
-                        android:textSize="14dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="20dp"/>
-                </RelativeLayout>
+                    android:paddingTop="14dp"/>
+                <TextView
+                    android:layout_below="@+id/txtRecAct"
+                    android:layout_toRightOf="@+id/img_alarm"
+                    android:text="Historial de Recordatorios"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"/>
+              </RelativeLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 android:id="@+id/btnCalculadora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/card_margin_height"
+                android:layout_marginLeft="@dimen/card_margin_width"
+                android:layout_marginRight="@dimen/card_margin_width">
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="72dp">
+                <ImageView
+                    android:id="@+id/img_cal"
+                    android:src="@drawable/ic_calculator"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="16dp"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:id="@+id/txtCalAct"
+                    android:text="Calculadora"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_toRightOf="@+id/img_cal"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="72dp">
-                    <ImageView
-                        android:id="@+id/img_cal"
-                        android:src="@drawable/ic_calculator"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="16dp"
-                        android:layout_alignParentLeft="true"/>
-                    <TextView
-                        android:id="@+id/txtCalAct"
-                        android:text="Calculadora"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:layout_toRightOf="@+id/img_cal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="14dp"/>
-                    <TextView
-                        android:layout_below="@+id/txtCalAct"
-                        android:layout_toRightOf="@+id/img_cal"
-                        android:text="Calculadora de Goteo / Dosis"
-                        android:textSize="14dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="20dp"/>
-                </RelativeLayout>
+                    android:paddingTop="14dp"/>
+                <TextView
+                    android:layout_below="@+id/txtCalAct"
+                    android:layout_toRightOf="@+id/img_cal"
+                    android:text="Calculadora de Goteo / Dosis"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"/>
+              </RelativeLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 android:id="@+id/btnGuia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/card_margin_height"
+                android:layout_marginLeft="@dimen/card_margin_width"
+                android:layout_marginRight="@dimen/card_margin_width">
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="72dp">
+                <ImageView
+                    android:id="@+id/img_list"
+                    android:src="@drawable/ic_list"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="16dp"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:id="@+id/txtGuiaAct"
+                    android:layout_toRightOf="@+id/img_list"
+                    android:text="Guía Parenteral"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="72dp">
-                    <ImageView
-                        android:id="@+id/img_list"
-                        android:src="@drawable/ic_list"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="16dp"
-                        android:layout_alignParentLeft="true"/>
-                    <TextView
-                        android:id="@+id/txtGuiaAct"
-                        android:layout_toRightOf="@+id/img_list"
-                        android:text="Guía Parenteral"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="14dp"/>
-                    <TextView
-                        android:layout_below="@+id/txtGuiaAct"
-                        android:layout_toRightOf="@+id/img_list"
-                        android:text="Guía de Administración Parenteral"
-                        android:textSize="14dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="20dp"/>
-                </RelativeLayout>
+                    android:paddingTop="14dp"/>
+                <TextView
+                    android:layout_below="@+id/txtGuiaAct"
+                    android:layout_toRightOf="@+id/img_list"
+                    android:text="Guía de Administración Parenteral"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"/>
+              </RelativeLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                   android:id="@+id/btnPacientes"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:layout_marginTop="20dp"
-                  android:layout_marginLeft="15dp"
-                  android:layout_marginRight="15dp"
-                  android:layout_marginBottom="25dp">
+                  android:layout_marginTop="@dimen/card_margin_height"
+                  android:layout_marginBottom="@dimen/card_margin_height"
+                  android:layout_marginLeft="@dimen/card_margin_width"
+                  android:layout_marginRight="@dimen/card_margin_width">
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -165,6 +172,16 @@
                     android:paddingBottom="20dp"/>
               </RelativeLayout>
             </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+          </LinearLayout>
+        </ScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"      
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:theme="@style/NavigationDrawerStyle"
+        app:itemBackground="@android:color/transparent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view" />
+</android.support.v4.widget.DrawerLayout>

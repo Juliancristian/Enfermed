@@ -212,6 +212,7 @@
     <Compile Include="RotacionDetail.cs" />
     <Compile Include="RotacionEdit.cs" />
     <Compile Include="RotacionList.cs" />
+    <Compile Include="ScanCodeBarras.cs" />
     <Compile Include="ScanCodeQR.cs" />
     <Compile Include="Services\GuiaService.cs" />
     <Compile Include="Services\MedicamentoService.cs" />
@@ -330,6 +331,15 @@
     <AndroidResource Include="Resources\layout\rotacionListRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\RotacionAlert.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ScanCodeBarras.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\nav_header.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -368,9 +378,6 @@
     <AndroidResource Include="Resources\drawable\ic_drops.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_exit.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_list.png" />
   </ItemGroup>
   <ItemGroup>
@@ -389,9 +396,6 @@
     <AndroidResource Include="Resources\drawable\ic_patients.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Menu\popupMenuQR.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Menu\popupMenu.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -399,6 +403,30 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Menu\bottomNavigation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_barras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\popupMenuCode.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\drawer_view.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_drawer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
