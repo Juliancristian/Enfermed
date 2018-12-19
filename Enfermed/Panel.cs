@@ -50,28 +50,28 @@ namespace Enfermed
                 Iniciando actividades con Intents.
                 Se puede usar las intents para varias tareas, pero en este caso el intent inicia otra activity.           
                 */
-                Intent myIntent = new Intent(this, typeof(Recordatorio));
+                StartActivity(new Intent(this, typeof(Recordatorio)));
             };
 
             // Traemos el boton para la siguiente Activity: CALCULADORA
             _btnCalculadora = FindViewById<CardView>(Resource.Id.btnCalculadora);
             _btnCalculadora.Click += (sender, args) =>
             {
-                Intent myIntent = new Intent(this, typeof(Calculadora));
+                StartActivity(new Intent(this, typeof(Calculadora)));
             };
 
             // Traemos el boton para la siguiente Activity: GUIA
             _btnGuia = FindViewById<CardView>(Resource.Id.btnGuia);
             _btnGuia.Click += (sender, args) =>
             {
-                Intent myIntent = new Intent(this, typeof(GuiaList));
+                StartActivity(new Intent(this, typeof(GuiaList)));
             };
 
             // Traemos el boton para la siguiente Activity: PACIENTES
             _btnPacientes = FindViewById<CardView>(Resource.Id.btnPacientes);
             _btnPacientes.Click += (sender, args) =>
             {
-                Intent myIntent = new Intent(this, typeof(PacienteList));
+                StartActivity(new Intent(this, typeof(PacienteList)));
             };
         }
 
