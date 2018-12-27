@@ -88,10 +88,15 @@ namespace Enfermed.Fragments
         {
             Intent intent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
             intent.PutExtra(RecognizerIntent.ExtraLanguageModel, RecognizerIntent.LanguageModelFreeForm);
-            intent.PutExtra(RecognizerIntent.ExtraLanguage, Java.Util.Locale.Default);
 
             // Mensaje en el diálogo modal
             intent.PutExtra(RecognizerIntent.ExtraPrompt, "Hable ahora!");
+
+            intent.PutExtra(RecognizerIntent.ExtraSpeechInputCompleteSilenceLengthMillis, 1500);
+            intent.PutExtra(RecognizerIntent.ExtraSpeechInputPossiblyCompleteSilenceLengthMillis, 1500);
+            intent.PutExtra(RecognizerIntent.ExtraSpeechInputMinimumLengthMillis, 15000);
+            intent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
+            intent.PutExtra(RecognizerIntent.ExtraLanguage, Java.Util.Locale.Default);
             try
             {
                 StartActivityForResult(intent, VOICE);
@@ -115,7 +120,7 @@ namespace Enfermed.Fragments
                         // limite de salida para 500 caracteres
                         if (textInput.Length > 500)
                             textInput = textInput.Substring(0, 500);
-                        _edtSearch.Text = textInput;
+                            _edtSearch.Text = textInput;
                     }
                     else
                     {

@@ -1,0 +1,1 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"><item android:id="@+id/codeqr" android:enabled="true" android:icon="@drawable/ic_qr" android:title="QR" app:showAsAction="ifRoom" /></menu>

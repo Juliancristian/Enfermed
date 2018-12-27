@@ -17,14 +17,12 @@
                 android:id="@+id/txtFarmacoDosis"
                 android:textSize="17dp"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:layout_marginLeft="15dp"/>
+                android:gravity="left"/>
             <TextView
                 android:id="@+id/txtFechaHorario"
                 android:textSize="12dp"
                 android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="8dip"/>
+                android:gravity="right"/>
         </TableRow>
         <TableRow
           android:layout_height="wrap_content"
@@ -34,16 +32,14 @@
                 android:id="@+id/txtHabiCama"
                 android:textSize="12dp"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:layout_marginLeft="15dp"/>
+                android:gravity="left"/>
             <TextView
                 android:id="@+id/txtConfirmado"
                 android:textSize="12dp"
                 android:textColor="#119024"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="9dip"/>
+                android:gravity="right"/>
         </TableRow>
         <TableRow
           android:layout_height="wrap_content"
@@ -53,16 +49,14 @@
                 android:id="@+id/txtNomApe"
                 android:textSize="12dp"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:layout_marginLeft="15dp"/>
+                android:gravity="left"/>
             <TextView
                 android:id="@+id/txtNoConfirmado"
                 android:textSize="12dp"
                 android:textColor="#D21414"
                 android:textStyle="bold"
                 android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="9dip"/>
+                android:gravity="right"/>
         </TableRow> 
     </TableLayout>
 </RelativeLayout>

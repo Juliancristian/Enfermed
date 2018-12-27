@@ -1151,44 +1151,44 @@ namespace Enfermed
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f060054
-			public const int abc_background_cache_hint_selector_material_dark = 2131099732;
-			
 			// aapt resource value: 0x7f060055
-			public const int abc_background_cache_hint_selector_material_light = 2131099733;
+			public const int abc_background_cache_hint_selector_material_dark = 2131099733;
 			
 			// aapt resource value: 0x7f060056
-			public const int abc_btn_colored_borderless_text_material = 2131099734;
+			public const int abc_background_cache_hint_selector_material_light = 2131099734;
 			
 			// aapt resource value: 0x7f060057
-			public const int abc_btn_colored_text_material = 2131099735;
+			public const int abc_btn_colored_borderless_text_material = 2131099735;
 			
 			// aapt resource value: 0x7f060058
-			public const int abc_color_highlight_material = 2131099736;
+			public const int abc_btn_colored_text_material = 2131099736;
 			
 			// aapt resource value: 0x7f060059
-			public const int abc_hint_foreground_material_dark = 2131099737;
+			public const int abc_color_highlight_material = 2131099737;
 			
 			// aapt resource value: 0x7f06005a
-			public const int abc_hint_foreground_material_light = 2131099738;
+			public const int abc_hint_foreground_material_dark = 2131099738;
+			
+			// aapt resource value: 0x7f06005b
+			public const int abc_hint_foreground_material_light = 2131099739;
 			
 			// aapt resource value: 0x7f06000d
 			public const int abc_input_method_navigation_guard = 2131099661;
 			
-			// aapt resource value: 0x7f06005b
-			public const int abc_primary_text_disable_only_material_dark = 2131099739;
-			
 			// aapt resource value: 0x7f06005c
-			public const int abc_primary_text_disable_only_material_light = 2131099740;
+			public const int abc_primary_text_disable_only_material_dark = 2131099740;
 			
 			// aapt resource value: 0x7f06005d
-			public const int abc_primary_text_material_dark = 2131099741;
+			public const int abc_primary_text_disable_only_material_light = 2131099741;
 			
 			// aapt resource value: 0x7f06005e
-			public const int abc_primary_text_material_light = 2131099742;
+			public const int abc_primary_text_material_dark = 2131099742;
 			
 			// aapt resource value: 0x7f06005f
-			public const int abc_search_url_text = 2131099743;
+			public const int abc_primary_text_material_light = 2131099743;
+			
+			// aapt resource value: 0x7f060060
+			public const int abc_search_url_text = 2131099744;
 			
 			// aapt resource value: 0x7f06000e
 			public const int abc_search_url_text_normal = 2131099662;
@@ -1199,32 +1199,32 @@ namespace Enfermed
 			// aapt resource value: 0x7f060010
 			public const int abc_search_url_text_selected = 2131099664;
 			
-			// aapt resource value: 0x7f060060
-			public const int abc_secondary_text_material_dark = 2131099744;
-			
 			// aapt resource value: 0x7f060061
-			public const int abc_secondary_text_material_light = 2131099745;
+			public const int abc_secondary_text_material_dark = 2131099745;
 			
 			// aapt resource value: 0x7f060062
-			public const int abc_tint_btn_checkable = 2131099746;
+			public const int abc_secondary_text_material_light = 2131099746;
 			
 			// aapt resource value: 0x7f060063
-			public const int abc_tint_default = 2131099747;
+			public const int abc_tint_btn_checkable = 2131099747;
 			
 			// aapt resource value: 0x7f060064
-			public const int abc_tint_edittext = 2131099748;
+			public const int abc_tint_default = 2131099748;
 			
 			// aapt resource value: 0x7f060065
-			public const int abc_tint_seek_thumb = 2131099749;
+			public const int abc_tint_edittext = 2131099749;
 			
 			// aapt resource value: 0x7f060066
-			public const int abc_tint_spinner = 2131099750;
+			public const int abc_tint_seek_thumb = 2131099750;
 			
 			// aapt resource value: 0x7f060067
-			public const int abc_tint_switch_thumb = 2131099751;
+			public const int abc_tint_spinner = 2131099751;
 			
 			// aapt resource value: 0x7f060068
-			public const int abc_tint_switch_track = 2131099752;
+			public const int abc_tint_switch_thumb = 2131099752;
+			
+			// aapt resource value: 0x7f060069
+			public const int abc_tint_switch_track = 2131099753;
 			
 			// aapt resource value: 0x7f060011
 			public const int accent_material_dark = 2131099665;
@@ -1280,11 +1280,14 @@ namespace Enfermed
 			// aapt resource value: 0x7f06000b
 			public const int cardview_shadow_start_color = 2131099659;
 			
+			// aapt resource value: 0x7f060053
+			public const int colorAccent = 2131099731;
+			
 			// aapt resource value: 0x7f060052
 			public const int colorPrimary = 2131099730;
 			
-			// aapt resource value: 0x7f060069
-			public const int common_google_signin_btn_text_dark = 2131099753;
+			// aapt resource value: 0x7f06006a
+			public const int common_google_signin_btn_text_dark = 2131099754;
 			
 			// aapt resource value: 0x7f060000
 			public const int common_google_signin_btn_text_dark_default = 2131099648;
@@ -1298,8 +1301,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f060003
 			public const int common_google_signin_btn_text_dark_pressed = 2131099651;
 			
-			// aapt resource value: 0x7f06006a
-			public const int common_google_signin_btn_text_light = 2131099754;
+			// aapt resource value: 0x7f06006b
+			public const int common_google_signin_btn_text_light = 2131099755;
 			
 			// aapt resource value: 0x7f060004
 			public const int common_google_signin_btn_text_light_default = 2131099652;
@@ -1313,14 +1316,14 @@ namespace Enfermed
 			// aapt resource value: 0x7f060007
 			public const int common_google_signin_btn_text_light_pressed = 2131099655;
 			
-			// aapt resource value: 0x7f06006b
-			public const int common_google_signin_btn_tint = 2131099755;
+			// aapt resource value: 0x7f06006c
+			public const int common_google_signin_btn_tint = 2131099756;
 			
 			// aapt resource value: 0x7f060047
 			public const int design_bottom_navigation_shadow_color = 2131099719;
 			
-			// aapt resource value: 0x7f06006c
-			public const int design_error = 2131099756;
+			// aapt resource value: 0x7f06006d
+			public const int design_error = 2131099757;
 			
 			// aapt resource value: 0x7f060048
 			public const int design_fab_shadow_end_color = 2131099720;
@@ -1352,8 +1355,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f060051
 			public const int design_textinput_error_color_light = 2131099729;
 			
-			// aapt resource value: 0x7f06006d
-			public const int design_tint_password_toggle = 2131099757;
+			// aapt resource value: 0x7f06006e
+			public const int design_tint_password_toggle = 2131099758;
 			
 			// aapt resource value: 0x7f06001f
 			public const int dim_foreground_disabled_material_dark = 2131099679;
@@ -1466,8 +1469,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f060042
 			public const int secondary_text_disabled_material_light = 2131099714;
 			
-			// aapt resource value: 0x7f060053
-			public const int semitransparent = 2131099731;
+			// aapt resource value: 0x7f060054
+			public const int semitransparent = 2131099732;
 			
 			// aapt resource value: 0x7f060043
 			public const int switch_thumb_disabled_material_dark = 2131099715;
@@ -1475,11 +1478,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f060044
 			public const int switch_thumb_disabled_material_light = 2131099716;
 			
-			// aapt resource value: 0x7f06006e
-			public const int switch_thumb_material_dark = 2131099758;
-			
 			// aapt resource value: 0x7f06006f
-			public const int switch_thumb_material_light = 2131099759;
+			public const int switch_thumb_material_dark = 2131099759;
+			
+			// aapt resource value: 0x7f060070
+			public const int switch_thumb_material_light = 2131099760;
 			
 			// aapt resource value: 0x7f060045
 			public const int switch_thumb_normal_material_dark = 2131099717;
@@ -2480,8 +2483,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0010
 			public const int adjust_width = 2131361808;
 			
-			// aapt resource value: 0x7f0a0119
-			public const int after_logo_tv = 2131362073;
+			// aapt resource value: 0x7f0a011c
+			public const int after_logo_tv = 2131362076;
 			
 			// aapt resource value: 0x7f0a005f
 			public const int alertTitle = 2131361887;
@@ -2492,11 +2495,14 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a002b
 			public const int always = 2131361835;
 			
+			// aapt resource value: 0x7f0a0104
+			public const int appbar = 2131362052;
+			
 			// aapt resource value: 0x7f0a0015
 			public const int auto = 2131361813;
 			
-			// aapt resource value: 0x7f0a0117
-			public const int before_logo_tv = 2131362071;
+			// aapt resource value: 0x7f0a011a
+			public const int before_logo_tv = 2131362074;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int beginning = 2131361832;
@@ -2540,8 +2546,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0052
 			public const int buttonPanel = 2131361874;
 			
-			// aapt resource value: 0x7f0a0113
-			public const int cameraView = 2131362067;
+			// aapt resource value: 0x7f0a0116
+			public const int cameraView = 2131362070;
 			
 			// aapt resource value: 0x7f0a00c8
 			public const int cancel_action = 2131361992;
@@ -2621,8 +2627,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00f6
 			public const int drawer_layout = 2131362038;
 			
-			// aapt resource value: 0x7f0a0125
-			public const int edit = 2131362085;
+			// aapt resource value: 0x7f0a012a
+			public const int edit = 2131362090;
 			
 			// aapt resource value: 0x7f0a00dd
 			public const int editApellido = 2131362013;
@@ -2693,8 +2699,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0033
 			public const int enterAlwaysCollapsed = 2131361843;
 			
-			// aapt resource value: 0x7f0a0124
-			public const int exit = 2131362084;
+			// aapt resource value: 0x7f0a0129
+			public const int exit = 2131362089;
 			
 			// aapt resource value: 0x7f0a0034
 			public const int exitUntilCollapsed = 2131361844;
@@ -2717,8 +2723,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0046
 			public const int @fixed = 2131361862;
 			
-			// aapt resource value: 0x7f0a011a
-			public const int footer_tv = 2131362074;
+			// aapt resource value: 0x7f0a011d
+			public const int footer_tv = 2131362077;
 			
 			// aapt resource value: 0x7f0a009f
 			public const int guiaBody = 2131361951;
@@ -2732,8 +2738,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a009e
 			public const int guiaTitle = 2131361950;
 			
-			// aapt resource value: 0x7f0a0116
-			public const int header_tv = 2131362070;
+			// aapt resource value: 0x7f0a0119
+			public const int header_tv = 2131362073;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
@@ -2747,14 +2753,14 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00d5
 			public const int icon_group = 2131362005;
 			
-			// aapt resource value: 0x7f0a011d
-			public const int icon_medicamento = 2131362077;
+			// aapt resource value: 0x7f0a0120
+			public const int icon_medicamento = 2131362080;
 			
 			// aapt resource value: 0x7f0a0012
 			public const int icon_only = 2131361810;
 			
-			// aapt resource value: 0x7f0a011e
-			public const int icon_rotacion = 2131362078;
+			// aapt resource value: 0x7f0a0121
+			public const int icon_rotacion = 2131362081;
 			
 			// aapt resource value: 0x7f0a002d
 			public const int ifRoom = 2131361837;
@@ -2813,11 +2819,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a004f
 			public const int list_item = 2131361871;
 			
-			// aapt resource value: 0x7f0a0118
-			public const int logo = 2131362072;
+			// aapt resource value: 0x7f0a011b
+			public const int logo = 2131362075;
 			
-			// aapt resource value: 0x7f0a011c
-			public const int masked = 2131362076;
+			// aapt resource value: 0x7f0a011f
+			public const int masked = 2131362079;
 			
 			// aapt resource value: 0x7f0a00ca
 			public const int media_actions = 2131361994;
@@ -2837,20 +2843,20 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0021
 			public const int multiply = 2131361825;
 			
-			// aapt resource value: 0x7f0a0120
-			public const int nav_calculadora = 2131362080;
+			// aapt resource value: 0x7f0a0123
+			public const int nav_calculadora = 2131362083;
 			
-			// aapt resource value: 0x7f0a0121
-			public const int nav_guia = 2131362081;
+			// aapt resource value: 0x7f0a0124
+			public const int nav_guia = 2131362084;
+			
+			// aapt resource value: 0x7f0a0125
+			public const int nav_pacientes = 2131362085;
 			
 			// aapt resource value: 0x7f0a0122
-			public const int nav_pacientes = 2131362082;
+			public const int nav_recordatorio = 2131362082;
 			
-			// aapt resource value: 0x7f0a011f
-			public const int nav_recordatorio = 2131362079;
-			
-			// aapt resource value: 0x7f0a0123
-			public const int nav_salir = 2131362083;
+			// aapt resource value: 0x7f0a0126
+			public const int nav_salir = 2131362086;
 			
 			// aapt resource value: 0x7f0a0103
 			public const int nav_view = 2131362051;
@@ -2918,11 +2924,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00ac
 			public const int radio5 = 2131361964;
 			
-			// aapt resource value: 0x7f0a010d
-			public const int radioAire = 2131362061;
+			// aapt resource value: 0x7f0a0110
+			public const int radioAire = 2131362064;
 			
-			// aapt resource value: 0x7f0a010c
-			public const int radioComun = 2131362060;
+			// aapt resource value: 0x7f0a010f
+			public const int radioComun = 2131362063;
 			
 			// aapt resource value: 0x7f0a00e0
 			public const int radioF = 2131362016;
@@ -2933,8 +2939,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00a6
 			public const int radio_group = 2131361958;
 			
-			// aapt resource value: 0x7f0a0126
-			public const int remove = 2131362086;
+			// aapt resource value: 0x7f0a012b
+			public const int remove = 2131362091;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int right = 2131361852;
@@ -2945,11 +2951,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00ce
 			public const int right_side = 2131361998;
 			
-			// aapt resource value: 0x7f0a0112
-			public const int rotacionListFragmentContainer = 2131362066;
+			// aapt resource value: 0x7f0a0115
+			public const int rotacionListFragmentContainer = 2131362069;
 			
-			// aapt resource value: 0x7f0a0111
-			public const int rotacionListView = 2131362065;
+			// aapt resource value: 0x7f0a0114
+			public const int rotacionListView = 2131362068;
 			
 			// aapt resource value: 0x7f0a0081
 			public const int row_1 = 2131361921;
@@ -3056,8 +3062,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0053
 			public const int spacer = 2131361875;
 			
-			// aapt resource value: 0x7f0a0115
-			public const int splash_wrapper_rl = 2131362069;
+			// aapt resource value: 0x7f0a0118
+			public const int splash_wrapper_rl = 2131362072;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
@@ -3088,6 +3094,9 @@ namespace Enfermed
 			
 			// aapt resource value: 0x7f0a001a
 			public const int tabMode = 2131361818;
+			
+			// aapt resource value: 0x7f0a0105
+			public const int tabs = 2131362053;
 			
 			// aapt resource value: 0x7f0a00d9
 			public const int text = 2131362009;
@@ -3152,8 +3161,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00fc
 			public const int txtCalAct = 2131362044;
 			
-			// aapt resource value: 0x7f0a0107
-			public const int txtConfirmado = 2131362055;
+			// aapt resource value: 0x7f0a010a
+			public const int txtConfirmado = 2131362058;
 			
 			// aapt resource value: 0x7f0a0080
 			public const int txtDosis = 2131361920;
@@ -3170,8 +3179,8 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00b7
 			public const int txtFecha = 2131361975;
 			
-			// aapt resource value: 0x7f0a0105
-			public const int txtFechaHorario = 2131362053;
+			// aapt resource value: 0x7f0a0108
+			public const int txtFechaHorario = 2131362056;
 			
 			// aapt resource value: 0x7f0a00ec
 			public const int txtGenero = 2131362028;
@@ -3182,20 +3191,20 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00ff
 			public const int txtGuiaAct = 2131362047;
 			
-			// aapt resource value: 0x7f0a0106
-			public const int txtHabiCama = 2131362054;
+			// aapt resource value: 0x7f0a0109
+			public const int txtHabiCama = 2131362057;
 			
 			// aapt resource value: 0x7f0a00b9
 			public const int txtHora = 2131361977;
 			
-			// aapt resource value: 0x7f0a0104
-			public const int txtMensaje = 2131362052;
+			// aapt resource value: 0x7f0a0107
+			public const int txtMensaje = 2131362055;
 			
-			// aapt resource value: 0x7f0a0109
-			public const int txtNoConfirmado = 2131362057;
+			// aapt resource value: 0x7f0a010c
+			public const int txtNoConfirmado = 2131362060;
 			
-			// aapt resource value: 0x7f0a0108
-			public const int txtNomApe = 2131362056;
+			// aapt resource value: 0x7f0a010b
+			public const int txtNomApe = 2131362059;
 			
 			// aapt resource value: 0x7f0a00e6
 			public const int txtNombre = 2131362022;
@@ -3212,20 +3221,20 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a0102
 			public const int txtPacAct = 2131362050;
 			
-			// aapt resource value: 0x7f0a010e
-			public const int txtPosCubito = 2131362062;
+			// aapt resource value: 0x7f0a0111
+			public const int txtPosCubito = 2131362065;
 			
-			// aapt resource value: 0x7f0a010a
-			public const int txtPosicion = 2131362058;
+			// aapt resource value: 0x7f0a010d
+			public const int txtPosicion = 2131362061;
 			
 			// aapt resource value: 0x7f0a00f9
 			public const int txtRecAct = 2131362041;
 			
-			// aapt resource value: 0x7f0a0114
-			public const int txtResult = 2131362068;
+			// aapt resource value: 0x7f0a0117
+			public const int txtResult = 2131362071;
 			
-			// aapt resource value: 0x7f0a010b
-			public const int txtTipoColchon = 2131362059;
+			// aapt resource value: 0x7f0a010e
+			public const int txtTipoColchon = 2131362062;
 			
 			// aapt resource value: 0x7f0a00b5
 			public const int txtViaAdmin = 2131361973;
@@ -3269,11 +3278,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a00e3
 			public const int txtView_NroHistoria = 2131362019;
 			
-			// aapt resource value: 0x7f0a0110
-			public const int txtView_Posicion = 2131362064;
+			// aapt resource value: 0x7f0a0113
+			public const int txtView_Posicion = 2131362067;
 			
-			// aapt resource value: 0x7f0a010f
-			public const int txtView_TipoColchon = 2131362063;
+			// aapt resource value: 0x7f0a0112
+			public const int txtView_TipoColchon = 2131362066;
 			
 			// aapt resource value: 0x7f0a00b4
 			public const int txtView_Via = 2131361972;
@@ -3290,8 +3299,11 @@ namespace Enfermed
 			// aapt resource value: 0x7f0a000e
 			public const int view_offset_helper = 2131361806;
 			
-			// aapt resource value: 0x7f0a011b
-			public const int visible = 2131362075;
+			// aapt resource value: 0x7f0a0106
+			public const int viewpager = 2131362054;
+			
+			// aapt resource value: 0x7f0a011e
+			public const int visible = 2131362078;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int wide = 2131361812;
@@ -3602,58 +3614,61 @@ namespace Enfermed
 			public const int Recordatorio = 2130903120;
 			
 			// aapt resource value: 0x7f030051
-			public const int RecordatorioRotacion = 2130903121;
+			public const int recordMedicamentoFragment = 2130903121;
 			
 			// aapt resource value: 0x7f030052
 			public const int recordMedicamentoListRow = 2130903122;
 			
 			// aapt resource value: 0x7f030053
-			public const int recordRotacionListRow = 2130903123;
+			public const int recordRotacionFragment = 2130903123;
 			
 			// aapt resource value: 0x7f030054
-			public const int RotacionAdd = 2130903124;
+			public const int recordRotacionListRow = 2130903124;
 			
 			// aapt resource value: 0x7f030055
-			public const int RotacionAlert = 2130903125;
+			public const int RotacionAdd = 2130903125;
 			
 			// aapt resource value: 0x7f030056
-			public const int RotacionBorrar = 2130903126;
+			public const int RotacionAlert = 2130903126;
 			
 			// aapt resource value: 0x7f030057
-			public const int RotacionDetail = 2130903127;
+			public const int RotacionBorrar = 2130903127;
 			
 			// aapt resource value: 0x7f030058
-			public const int RotacionEdit = 2130903128;
+			public const int RotacionDetail = 2130903128;
 			
 			// aapt resource value: 0x7f030059
-			public const int rotacionFragment = 2130903129;
+			public const int RotacionEdit = 2130903129;
 			
 			// aapt resource value: 0x7f03005a
-			public const int RotacionList = 2130903130;
+			public const int rotacionFragment = 2130903130;
 			
 			// aapt resource value: 0x7f03005b
-			public const int rotacionListRow = 2130903131;
+			public const int RotacionList = 2130903131;
 			
 			// aapt resource value: 0x7f03005c
-			public const int ScanCodeBarras = 2130903132;
+			public const int rotacionListRow = 2130903132;
 			
 			// aapt resource value: 0x7f03005d
-			public const int ScanCodeQR = 2130903133;
+			public const int ScanCodeBarras = 2130903133;
 			
 			// aapt resource value: 0x7f03005e
-			public const int select_dialog_item_material = 2130903134;
+			public const int ScanCodeQR = 2130903134;
 			
 			// aapt resource value: 0x7f03005f
-			public const int select_dialog_multichoice_material = 2130903135;
+			public const int select_dialog_item_material = 2130903135;
 			
 			// aapt resource value: 0x7f030060
-			public const int select_dialog_singlechoice_material = 2130903136;
+			public const int select_dialog_multichoice_material = 2130903136;
 			
 			// aapt resource value: 0x7f030061
-			public const int splash = 2130903137;
+			public const int select_dialog_singlechoice_material = 2130903137;
 			
 			// aapt resource value: 0x7f030062
-			public const int support_simple_spinner_dropdown_item = 2130903138;
+			public const int splash = 2130903138;
+			
+			// aapt resource value: 0x7f030063
+			public const int support_simple_spinner_dropdown_item = 2130903139;
 			
 			static Layout()
 			{
@@ -3675,13 +3690,16 @@ namespace Enfermed
 			public const int drawer_view = 2131558401;
 			
 			// aapt resource value: 0x7f0d0002
-			public const int popupExit = 2131558402;
+			public const int popupCodeBarras = 2131558402;
 			
 			// aapt resource value: 0x7f0d0003
-			public const int popupMenu = 2131558403;
+			public const int popupCodeQR = 2131558403;
 			
 			// aapt resource value: 0x7f0d0004
-			public const int popupMenuCode = 2131558404;
+			public const int popupExit = 2131558404;
+			
+			// aapt resource value: 0x7f0d0005
+			public const int popupMenu = 2131558405;
 			
 			static Menu()
 			{

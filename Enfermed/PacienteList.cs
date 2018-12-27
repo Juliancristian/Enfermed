@@ -49,21 +49,17 @@ namespace Enfermed
             };
         }
 
+        // Popup Code QR
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.popupMenuCode, menu);
+            MenuInflater.Inflate(Resource.Menu.popupCodeQR, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            // Si selecciona icon codebarras
-            if (item.ItemId == Resource.Id.codebarras)
-            {
-                // Acción redireccionar a otra activity
-                StartActivity(new Intent(this, typeof(ScanCodeBarras)));
-            }
-            else
+            // Si selecciona icon codeqr
+            if (item.ItemId == Resource.Id.codeqr)
             {
                 // Acción redireccionar a otra activity
                 StartActivity(new Intent(this, typeof(ScanCodeQR)));

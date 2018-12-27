@@ -62,7 +62,7 @@ namespace Enfermed
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.ScanCodeQR);
+            SetContentView(Resource.Layout.ScanCodeBarras);
 
             _surfaceView = FindViewById<SurfaceView>(Resource.Id.cameraView);
             _txtResult = FindViewById<TextView>(Resource.Id.txtResult);
@@ -76,7 +76,7 @@ namespace Enfermed
 
             // Creo el detector qr
             _barcodeDetector = new BarcodeDetector.Builder(this)
-                .SetBarcodeFormats(BarcodeFormat.Code39)
+                .SetBarcodeFormats(BarcodeFormat.Ean13)
                 .Build();
 
             // Creo la camara

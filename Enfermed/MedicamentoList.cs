@@ -7,6 +7,7 @@ using Enfermed.Fragments;
 using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Views;
 
 namespace Enfermed
 {
@@ -57,6 +58,25 @@ namespace Enfermed
                 i.PutExtra(MedicamentoAdd.KEY_ID, idPaciente); // Pasamos el Id Paciente
                 StartActivity(i);
             };
+        }
+
+        // Popup Code Barras
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.popupCodeBarras, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            // Si selecciona icon codebarras
+            if (item.ItemId == Resource.Id.codebarras)
+            {
+                // Acción redireccionar a otra activity
+                StartActivity(new Intent(this, typeof(ScanCodeBarras)));
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

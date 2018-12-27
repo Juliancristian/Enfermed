@@ -1,127 +1,84 @@
-using System;
 using System.Collections.Generic;
 using Android.OS;
 using Android.App;
-using Android.Views;
-using Android.Widget;
-using Android.Content;
-using Enfermed.Models;
-using Enfermed.Services;
-using Enfermed.Adapters;
+using Enfermed.Fragments;
+using Java.Lang;
 
 // importamos libreria AppCompatActivity
+using Android.Support.V4.App;
 using Android.Support.V7.App;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
-using AlertDialog = Android.App.AlertDialog;
+using Android.Support.V4.View;
 using Android.Support.Design.Widget;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
+using SupportFragment = Android.Support.V4.App.Fragment;
+using SupportFragmentManager = Android.Support.V4.App.FragmentManager;
 
 namespace Enfermed
 {
-    [Activity(Label = "Medicamentos", ParentActivity = typeof(Panel), Theme = "@style/MyTheme")]
+    [Activity(Label = "Recordatorio", ParentActivity = typeof(Panel), Theme = "@style/MyTheme")]
     public class Recordatorio : AppCompatActivity
     {
-        private TextView _txtMensaje;
-        private ListView _listView;
-        private Medicamento _medicamento;
-        private List<Medicamento> _listMedicamentos;
-        private MedicamentoService _medicamentoService;
-        private RecordMedicamentoAdapter adapter;
-        private BottomNavigationView _navigation;
+        private Toolbar _toolbar;
+        private TabLayout _tabs;
+        private ViewPager _viewPager;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Recordatorio);
 
-            Toolbar toolbarTop = FindViewById<Toolbar>(Resource.Id.toolbarTop);
-            SetSupportActionBar(toolbarTop);
-
-            // Una marca atrás en el icono en ActionBar
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-
-            _txtMensaje = FindViewById<TextView>(Resource.Id.txtMensaje);
-            _listView = (ListView)FindViewById(Resource.Id.listReminder);
-            _txtMensaje.Visibility = Android.Views.ViewStates.Invisible;
-
-            // Bottom Navigation View (Medicamento | Rotacion)
-            _navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            _navigation.InflateMenu(Resource.Menu.bottomNavigation);
-
-            // Deshabilitar Checked Default
-
-            IMenuItem menuItem = _navigation.Menu.GetItem(1);
-            menuItem.SetCheckable(false);
-            _navigation.Menu.GetItem(1).SetChecked(false);
-
-            // Items Medicamento | Rotacion
-            _navigation.NavigationItemSelected += Navigation_NavigationItemSelected;
-
-            // Mostrar lista o mensaje
-            BindData();
+            _toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            _tabs = FindViewById<TabLayout>(Resource.Id.tabs);
+            _viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
+    
+            SetSupportActionBar(_toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true); // Una marca atrás en el icono en ActionBar
+            SetUpViewPager(_viewPager);
+            _tabs.SetupWithViewPager(_viewPager);
         }
 
-        private void BindData()
+        private void SetUpViewPager(ViewPager viewPager)
         {
-            _medicamentoService = new MedicamentoService(); // Instanciamos
-            _listMedicamentos = _medicamentoService.getListMedicamentos(); // Devuelve lista
+            TabAdapter adapter = new TabAdapter(SupportFragmentManager);
+            adapter.AddFragment(new RecordMedicamentoFragment(), "Medicamento");
+            adapter.AddFragment(new RecordRotacionFragment(), "Rotación");
 
-            // Si hay registros, mostrar lista
-            if (_listMedicamentos.Count > 0)
+            viewPager.Adapter = adapter;
+        }
+
+        public class TabAdapter : FragmentPagerAdapter
+        {
+            public List<SupportFragment> Fragments { get; set; }
+            public List<string> FragmentNames { get; set; }
+
+            public TabAdapter(SupportFragmentManager sfm) : base(sfm)
             {
-                adapter = new RecordMedicamentoAdapter(this, _listMedicamentos);
-                _listView.Adapter = adapter;
-
-                // LISTA ITEMS CLICK
-                _listView.ItemClick += List_ItemClick;
+                Fragments = new List<SupportFragment>();
+                FragmentNames = new List<string>();
             }
-            else
+
+            public void AddFragment(SupportFragment fragment, string name)
             {
-                _listView.Visibility = Android.Views.ViewStates.Invisible;
-                _txtMensaje.Visibility = Android.Views.ViewStates.Visible;
-                _txtMensaje.Text = "No hay registros";
+                Fragments.Add(fragment);
+                FragmentNames.Add(name);
             }
-        }
 
-        private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            AlertDialog alert = dialog.Create();
-            alert.SetTitle("Confirmar");
-            //alert.SetMessage("¿Estás seguro?");
-            alert.SetIcon(Resource.Drawable.logo);
-            alert.SetButton("Si", (c, ev) =>
+            public override int Count
             {
-                _medicamento = _listMedicamentos[e.Position];
-                _medicamento.confirmar = true; // Confirmar Medicamento
-                _medicamentoService.updateMedicamento(_medicamento); // Actualiza el registro en la base de datos
+                get
+                {
+                    return Fragments.Count;
+                }
+            }
 
-                // Para actualizar una actividad desde dentro de sí mismo
-                Finish(); StartActivity(Intent);
-
-                GC.Collect();
-            });
-
-            alert.SetButton2("no", (c, ev) => { });
-            alert.Show();
-        }
-
-        private void Navigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
-        {
-            switch (e.Item.ItemId)
+            public override SupportFragment GetItem(int position)
             {
-                // Medicamentos
-                case Resource.Id.icon_medicamento:
+                return Fragments[position];
+            }
 
-                    // Acción redireccionar a otra activity
-                    StartActivity(new Intent(this, typeof(Recordatorio)));
-                    break;
-
-                // Rotacion
-                case Resource.Id.icon_rotacion:
-
-                    // Acción redireccionar a otra activity
-                    StartActivity(new Intent(this, typeof(RecordatorioRotacion)));
-                    break;
+            public override ICharSequence GetPageTitleFormatted(int position)
+            {
+                return new Java.Lang.String(FragmentNames[position]);
             }
         }
     }

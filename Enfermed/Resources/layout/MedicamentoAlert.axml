@@ -13,9 +13,12 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
      <ListView
         android:id="@+id/listReminder"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="65dp"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
         android:divider="#ddd"
-        android:dividerHeight="0.5dp"/>
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"/>
 </android.support.design.widget.CoordinatorLayout>

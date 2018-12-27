@@ -15,7 +15,7 @@ using AlertDialog = Android.App.AlertDialog;
 
 namespace Enfermed
 {
-    [Activity(Label = "Enfermed", Theme = "@style/MyTheme")]
+    [Activity(Label = "EnferMed", Theme = "@style/MyTheme")]
     public class Panel : AppCompatActivity
     {
         private DrawerLayout _mDrawerLayout;
@@ -142,10 +142,9 @@ namespace Enfermed
                 case 4:
                     AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                     AlertDialog alert = dialog.Create();
-                    alert.SetTitle("Salir");
-                    alert.SetMessage("¿Estás seguro?");
+                    alert.SetTitle("Salir de la aplicación");
                     alert.SetIcon(Resource.Drawable.logo);
-                    alert.SetButton("Si", (c, ev) =>
+                    alert.SetButton("Aceptar", (c, ev) =>
                     {
                         this.FinishAffinity();
                         Finish();
@@ -154,7 +153,7 @@ namespace Enfermed
                         GC.Collect();
                     });
 
-                    alert.SetButton2("no", (c, ev) => { });
+                    alert.SetButton2("Cancelar", (c, ev) => { });
                     alert.Show();
                     break;
             }

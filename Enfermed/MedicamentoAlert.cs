@@ -23,7 +23,6 @@ namespace Enfermed
         private Medicamento _medicamento;
         private List<Medicamento> _listMedicamentos;
         private MedicamentoService _medicamentoService;
-        private RecordMedicamentoAdapter adapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,12 +43,10 @@ namespace Enfermed
             _medicamentoService = new MedicamentoService(); // Instanciamos
             _listMedicamentos = _medicamentoService.getListMedicamentosNow(); // Devuelve lista
 
-            // Si hay registros de medicamentos.
+            // Si hay registros
             if (_listMedicamentos.Any())
-               // if (_listMedicamentos.Count > 0)
             {
-                adapter = new RecordMedicamentoAdapter(this, _listMedicamentos);
-                _listView.Adapter = adapter;
+                _listView.Adapter = new RecordMedicamentoAdapter(this, _listMedicamentos);
 
                 // Lista items click
                 _listView.ItemClick += List_ItemClick;
@@ -66,10 +63,9 @@ namespace Enfermed
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             AlertDialog alert = dialog.Create();
-            alert.SetTitle("Confirmar");
-            //alert.SetMessage("¿Estás seguro?");
+            alert.SetTitle("Medicamento");
             alert.SetIcon(Resource.Drawable.logo);
-            alert.SetButton("Si", (c, ev) =>
+            alert.SetButton("Confirmar", (c, ev) =>
             {
                 _medicamento = _listMedicamentos[e.Position];
                 _medicamento.confirmar = true; // Confirmar Medicamento
@@ -81,7 +77,7 @@ namespace Enfermed
                 GC.Collect();
             });
 
-            alert.SetButton2("no", (c, ev) => { });
+            alert.SetButton2("Omitir", (c, ev) => { });
             alert.Show();
         }
 
@@ -113,13 +109,6 @@ namespace Enfermed
 
                 alert.SetButton2("no", (c, ev) => { });
                 alert.Show();
-
-
-                /*
-                this.FinishAffinity();
-                Finish();
-                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-                */
             }
 
             return base.OnOptionsItemSelected(item);

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Android.OS;
 using Android.App;
@@ -22,7 +23,6 @@ namespace Enfermed
         private Rotacion _rotacion;
         private List<Rotacion> _listRotacion;
         private RotacionService _rotacionService;
-        private RecordRotacionAdapter adapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -43,14 +43,19 @@ namespace Enfermed
             _rotacionService = new RotacionService(); // Instanciamos
             _listRotacion = _rotacionService.getListRotacionNow(); // Devuelve lista
 
-            // Si hay registros mostrar lista
-            if (_listRotacion.Count > 0)
+            // Si hay registros
+            if (_listRotacion.Any())
             {
-                adapter = new RecordRotacionAdapter(this, _listRotacion);
-                _listView.Adapter = adapter;
+                _listView.Adapter = new RecordRotacionAdapter(this, _listRotacion);
 
                 // Lista items click
                 _listView.ItemClick += List_ItemClick;
+            }
+            else
+            {
+                this.FinishAffinity();
+                Finish();
+                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
             }
         }
 
@@ -58,10 +63,9 @@ namespace Enfermed
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             AlertDialog alert = dialog.Create();
-            alert.SetTitle("Confirmar");
-            //alert.SetMessage("¿Estás seguro?");
+            alert.SetTitle("Rotación");
             alert.SetIcon(Resource.Drawable.logo);
-            alert.SetButton("Si", (c, ev) =>
+            alert.SetButton("Confirmar", (c, ev) =>
             {
                 _rotacion = _listRotacion[e.Position];
                 _rotacion.confirmar = true; // Confirmar Rotación
@@ -73,7 +77,7 @@ namespace Enfermed
                 GC.Collect();
             });
 
-            alert.SetButton2("no", (c, ev) => { });
+            alert.SetButton2("Omitir", (c, ev) => { });
             alert.Show();
         }
 
@@ -89,9 +93,22 @@ namespace Enfermed
             // Si selecciona icon exit
             if (item.ItemId == Resource.Id.exit)
             {
-                this.FinishAffinity();
-                Finish();
-                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                AlertDialog alert = dialog.Create();
+                alert.SetTitle("Salir");
+                alert.SetMessage("¿Estás seguro?");
+                alert.SetIcon(Resource.Drawable.logo);
+                alert.SetButton("Si", (c, ev) =>
+                {
+                    this.FinishAffinity();
+                    Finish();
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+
+                    GC.Collect();
+                });
+
+                alert.SetButton2("no", (c, ev) => { });
+                alert.Show();
             }
 
             return base.OnOptionsItemSelected(item);
